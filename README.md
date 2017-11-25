@@ -20,7 +20,7 @@ por **Ricardo Martins**.
 
 > **Nota:**
 > *Esse projeto se basease no projeto 
-  "[clustering-vagrant](https://github.com/alisonbuss/clustering-vagrant/)" e no 
+  "[multiple-nodes-vagrant](https://github.com/alisonbuss/multiple-nodes-vagrant/)" e no 
   "[coreos-vagrant](https://github.com/coreos/coreos-vagrant/)", mas informamações 
   do projeto coreos-vagrant no site oficial [aqui!](https://coreos.com/os/docs/latest/booting-on-vagrant.html).* 
 >  
