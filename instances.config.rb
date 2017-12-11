@@ -43,15 +43,16 @@ Example a cluster with 3 nodes:
 
 DOMAIN = "example.com"
 
-SPECIFY_CLOUD_CONFIG_PATH = "cloud-config/cloud-config.yaml"
+PROJECT_PATH = File.dirname(__FILE__)
+SPECIFY_CLOUD_CONFIG_PATH = "#{PROJECT_PATH}/cloud-config/cloud-config.yaml"
 
 INSTANCES = {
-    :"coreos01" => { enableSharedFolders: true },
-    :"coreos02" => { enableSharedFolders: true },
-    :"coreos03" => { enableSharedFolders: true }
+    :"coreos01" => { enableSharedFolders: true, enableLogging: false },
+    :"coreos02" => { enableSharedFolders: true, enableLogging: false },
+    :"coreos03" => { enableSharedFolders: true, enableLogging: false }
 } 
 
 GLOBAL_SHARED_FOLDERS = [
-    {host: "shared-folder/", guest: "/home/core/shared"},
-    {host: "shared-folder/docker", guest: "/home/core/shared-docker", settings:{ create: true }}
+    {host: "#{PROJECT_PATH}/shared-folder/", guest: "/home/core/shared"},
+    {host: "#{PROJECT_PATH}/shared-folder/docker", guest: "/home/core/shared-docker", settings:{ create: true }}
 ]

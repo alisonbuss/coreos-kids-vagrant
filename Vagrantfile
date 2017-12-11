@@ -4,6 +4,10 @@
 VAGRANTFILE_API_VERSION = "2"
 PROJECT_PATH = File.dirname(__FILE__)
 
+puts ""
+puts "PATH PROJECT: '#{PROJECT_PATH}'"
+puts ""
+
 require "#{PROJECT_PATH}/instances.config.rb"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -104,7 +108,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             end 
             # generates log --------------------------------------------------------------
             if _enableLogging == true then
-                logdir = File.join(File.dirname(__FILE__), "log")
+                logdir = File.join("#{PROJECT_PATH}", "log")
                 FileUtils.mkdir_p(logdir)
                 serialFile = File.join(logdir, "#{_nameInstance}-serial.txt")
                 FileUtils.touch(serialFile)
