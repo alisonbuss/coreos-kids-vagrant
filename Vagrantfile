@@ -75,6 +75,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             end
             # provider virtualbox --------------------------------------------------------
             config.vm.provider "virtualbox" do |vb|
+                vb.name = "#{_nameInstance}.#{DOMAIN}"
                 vb.gui = false
                 vb.cpus = _cpus
                 vb.memory = _memory
